@@ -19,5 +19,8 @@
   "dependencies": {
     "redux": "^4.2.1",
     "typescript": "^5.0.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.1.3"
   }
 }
