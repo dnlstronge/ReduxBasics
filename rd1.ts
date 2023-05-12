@@ -9,10 +9,13 @@ const counterReducer = (state = {counter: 0}, action) =>  {
 
 
 const store = redux.createStore(counterReducer)
-console.log(store.getState())
+// console.log(store.getState())
 const counterSubscriber = () => {
     const latestState = store.getState()
     console.log(latestState)
 }
 // the reducer function will produce new state snapshots
 store.subscribe(counterSubscriber)
+store.dispatch({
+    type: "INCREMENT",
+})

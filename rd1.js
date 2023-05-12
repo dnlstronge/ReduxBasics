@@ -6,10 +6,13 @@ var counterReducer = function (state, action) {
     };
 };
 var store = redux.createStore(counterReducer);
-console.log(store.getState());
+// console.log(store.getState())
 var counterSubscriber = function () {
     var latestState = store.getState();
     console.log(latestState);
 };
 // the reducer function will produce new state snapshots
 store.subscribe(counterSubscriber);
+store.dispatch({
+    type: "INCREMENT"
+});
