@@ -7,7 +7,7 @@ const counterReducer = (state = {counter: 0}, action) =>  {
             counter: state.counter + 1
         }
     }
-    if(action.type === "DE-INCREMENT") {
+    if(action.type === "DECREMENT") {
         return {
             counter: state.counter - 1
         }
@@ -28,5 +28,5 @@ store.dispatch({
     type: "INCREMENT",
 })
 store.dispatch({
-    type: "DE-INCREMENT"
+    type: "DECREMENT"
 })
