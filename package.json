@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/dnlstronge/ReduxBasics#readme",
   "dependencies": {
+    "redux": "^4.2.1",
     "typescript": "^5.0.4"
   }
 }
