@@ -7,7 +7,7 @@ const counterReducer = (state = {counter: 0}, action) =>  {
             counter: state.counter + 1
         }
     }
-    if(action.type === "DE-INCREMNET") {
+    if(action.type === "DE-INCREMENT") {
         return {
             counter: state.counter - 1
         }

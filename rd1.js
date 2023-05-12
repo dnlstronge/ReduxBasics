@@ -6,6 +6,11 @@ var counterReducer = function (state, action) {
             counter: state.counter + 1
         };
     }
+    if (action.type === "DE-INCREMENT") {
+        return {
+            counter: state.counter - 1
+        };
+    }
     return state;
 };
 var store = redux.createStore(counterReducer);
@@ -18,4 +23,7 @@ var counterSubscriber = function () {
 store.subscribe(counterSubscriber);
 store.dispatch({
     type: "INCREMENT"
+});
+store.dispatch({
+    type: "DE-INCREMENT"
 });
