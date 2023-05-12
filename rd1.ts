@@ -7,6 +7,11 @@ const counterReducer = (state = {counter: 0}, action) =>  {
             counter: state.counter + 1
         }
     }
+    if(action.type === "DE-INCREMNET") {
+        return {
+            counter: state.counter - 1
+        }
+    }
     return state;
 }
 
@@ -21,4 +26,7 @@ const counterSubscriber = () => {
 store.subscribe(counterSubscriber)
 store.dispatch({
     type: "INCREMENT",
+})
+store.dispatch({
+    type: "DE-INCREMENT"
 })
